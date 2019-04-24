@@ -12,7 +12,7 @@
 
 <body class="mdui-loaded mdui-drawer-body-left mdui-bottom-nav-fixed">
     <div class="mdui-appbar-with-toolbar mdui-appbar-with-tab mdui-theme-accent-pink mdui-theme-primary-indigo ">
-        <div class="mdui-appbar mdui-appbar-fixed">
+        <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
             <div class="mdui-toolbar mdui-color-white mdui-color-theme">
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon"
                     mdui-drawer="{target: '#left-drawer', swipe: true}">
@@ -20,16 +20,20 @@
                 </a>
                 <a href="javascript:;" class="mdui-typo-title">学生请假系统</a>
                 <div class="mdui-toolbar-spacer"></div>
-                <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-                    <i class="mdui-icon material-icons">search</i>
-                </a>
+                <!-- <div class="mdui-textfield">
+                    <input class="mdui-textfield-input" type="text" placeholder="查找" />-->
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                        <i class="mdui-icon material-icons">search</i>
+                    </a>
+                <!-- </div> -->
+
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon">
                     <i class="mdui-icon material-icons">refresh</i>
                 </a>
-                <a href="javascript:;" class="mdui-typo-title mdui-btn">
-                    用户
-                    <i class="mdui-icon material-icons">more_vert</i></a>
-                
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                    <i class="mdui-icon material-icons">more_vert</i>
+                </a>
+
             </div>
 
             <div class="mdui-tab mdui-tab-centered mdui-color-theme" mdui-tab>
@@ -44,7 +48,7 @@
             <ul class="mdui-list" mdui-collapse="{accordion: true}">
                 <li class="mdui-collapse-item mdui-collapse-item-open">
                     <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                        <i class="mdui-list-item-icon mdui-icon material-icons">person</i>
+                        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">event_available</i>
                         <div class="mdui-list-item-content">请假管理</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                     </a>
@@ -56,21 +60,39 @@
                 </li>
 
                 <a class="mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons">star</i>
-                    <div class="mdui-list-item-content">Starred</div>
+                    <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
+                    <div class="mdui-list-item-content">所属班导</div>
                 </a>
-                <a class="mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons">drafts</i>
-                    <div class="mdui-list-item-content">Drafts</div>
-                </a>
-                <a class="mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons">email</i>
-                    <div class="mdui-list-item-content">All mail</div>
-                </a>
+                <li class="mdui-collapse-item mdui-collapse-item">
+                    <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <!-- <a class="mdui-list-item mdui-ripple"> -->
+                            <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-green">settings</i>
+                            <div class="mdui-list-item-content">资料修改</div>
+                        <!-- </a> -->
+                        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <li class="mdui-list-item mdui-ripple mdui-list-item">密码修改</li>
+                        <li class="mdui-list-item mdui-ripple">联系电话</li>
+                    </ul>
+                </li>
+                
             </ul>
         </div>
         <div class="mdui-container-fluid">
             <div id="example3-tab1">
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
                 <p>1</p>
                 <p>1</p>
                 <p>1</p>
@@ -88,30 +110,48 @@
                 <p>3</p>
                 <p>3</p>
             </div>
+            <div id="example3-tab4">
+                <p>4</p>
+                <p>4</p>
+                <p>4</p>
+                <p>4</p>
+            </div>
+            <div class="mdui-fab-wrapper mdui-fab-fixed " mdui-fab="{trigger:'hover'}">
+                <button class="mdui-fab  mdui-ripple mdui-color-pink-accent">
+                    <i class="mdui-icon material-icons">add</i>
+                    <i class="mdui-icon mdui-fab-opened material-icons">mode_edit</i>
+                </button>
+                <div class="mdui-fab-dial">
+                    <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange">
+                        <i class="mdui-icon material-icons">touch_app</i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-color-indigo">
-            <a href="#example3-tab4" class="mdui-ripple mdui-ripple-white mdui-bottom-nav-active">
-              <i class="mdui-icon material-icons">live_tv</i>
-              <label>Movies</label>
-            </a>
-            <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-              <i class="mdui-icon material-icons">music_note</i>
-              <label>Music</label>
-            </a>
-            <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-              <i class="mdui-icon material-icons">book</i>
-              <label>Books</label>
-            </a>
-            <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-              <i class="mdui-icon material-icons">library_books</i>
-              <label>Newsstand</label>
-            </a>
-          </div>
+    <!-- <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-color-indigo mdui-bottom-nav-scroll-hide">
+        <a href="#example3-tab4" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">live_tv</i>
+            <label>Movies</label>
+        </a>
+        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">music_note</i>
+            <label>Music</label>
+        </a>
+        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">book</i>
+            <label>Books</label>
+        </a>
+        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">library_books</i>
+            <label>Newsstand</label>
+        </a>
+    </div> -->
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/mdui.min.js"></script>
 <script>
 
 </script>
+
 </html>
