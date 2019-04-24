@@ -10,9 +10,9 @@
     <title>学生请假系统</title>
 </head>
 
-<body class="mdui-loaded mdui-drawer-body-left mdui-bottom-nav-fixed">
+<body class="mdui-loaded mdui-drawer-body-left">
     <div class="mdui-appbar-with-toolbar mdui-appbar-with-tab mdui-theme-accent-pink mdui-theme-primary-indigo ">
-        <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
+        <div class="mdui-appbar mdui-appbar-fixed mdui-headroom mdui-headroom-pinned-toolbar">
             <div class="mdui-toolbar mdui-color-white mdui-color-theme">
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon"
                     mdui-drawer="{target: '#left-drawer', swipe: true}">
@@ -44,7 +44,7 @@
         </div>
 
 
-        <div class="mc-drawer mdui-drawer mdui-drawer-open" id="left-drawer">
+        <div class="mc-drawer mdui-drawer " id="left-drawer">
             <ul class="mdui-list" mdui-collapse="{accordion: true}">
                 <li class="mdui-collapse-item mdui-collapse-item-open">
                     <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
@@ -129,24 +129,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-color-indigo mdui-bottom-nav-scroll-hide">
-        <a href="#example3-tab4" class="mdui-ripple mdui-ripple-white">
-            <i class="mdui-icon material-icons">live_tv</i>
-            <label>Movies</label>
-        </a>
-        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-            <i class="mdui-icon material-icons">music_note</i>
-            <label>Music</label>
-        </a>
-        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-            <i class="mdui-icon material-icons">book</i>
-            <label>Books</label>
-        </a>
-        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-            <i class="mdui-icon material-icons">library_books</i>
-            <label>Newsstand</label>
-        </a>
-    </div> -->
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/mdui.min.js"></script>
