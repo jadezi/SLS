@@ -20,60 +20,51 @@
                 </a>
                 <a href="javascript:;" class="mdui-typo-title">请假管理系统</a>
                 <div class="mdui-toolbar-spacer"></div>
-                <!-- <div class="mdui-textfield">
-                    <input class="mdui-textfield-input" type="text" placeholder="查找" />-->
-                    <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-                        <i class="mdui-icon material-icons">search</i>
-                    </a>
-                <!-- </div> -->
-
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                    <i class="mdui-icon material-icons">search</i>
+                </a>
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon">
                     <i class="mdui-icon material-icons">refresh</i>
                 </a>
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon">
                     <i class="mdui-icon material-icons">more_vert</i>
                 </a>
-
             </div>
-
         </div>
 
 
         <div class="mc-drawer mdui-drawer " id="left-drawer">
-            <ul class="mdui-list" mdui-collapse="{accordion: true}">
-                <li class="mdui-collapse-item mdui-collapse-item">
-                    <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <div class="mdui-list" mdui-collapse="{accordion: true}" >
+                <div class="mdui-collapse-item mdui-collapse-item-open" >
+                    <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
                         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-light-blue">insert_invitation</i>
                         <div class="mdui-list-item-content">学生请假管理</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                    </a>
-                    <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                        <li class="mdui-list-item mdui-ripple">最新申请</li>
-                        <li class="mdui-list-item mdui-ripple">历史假条</li>
-                    </ul>
-                </li>
-                <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">insert_chart</i>
-                    <div class="mdui-list-item-content">请假统计</div>
-                </a>
-                <li class="mdui-collapse-item mdui-collapse-item">
-                    <a class="mdui-collapse-item-header mdui-list-item mdui-ripple" href="#zlxg">
-                        <!-- <a class="mdui-list-item mdui-ripple"> -->
-                            <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-green">settings</i>
-                            <div class="mdui-list-item-content">资料修改</div>
-                        <!-- </a> -->
+                    </div>
+                    <div class="mdui-collapse-item-body mdui-list">
+                        <a href="#newsubmit" class="mdui-list-item mdui-ripple">最新申请</a>
+                        <a href="#historyvocation" class="mdui-list-item mdui-ripple">历史假条</a>
+                        <a href="#countvocation" class="mdui-list-item mdui-ripple">请假统计</a>
+                    </div>
+                </div>
+                <div class="mdui-collapse-item mdui-collapse-item">
+                    <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-green">settings</i>
+                        <div class="mdui-list-item-content">权限管理</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                    </a>
-                    <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                        <a href="./ChangePwd.html" class="mdui-list-item mdui-ripple mdui-list-item">密码修改</a>
-                        <a class="mdui-list-item mdui-ripple">联系电话</a>
-                    </ul>
-                </li>
-                
-            </ul>
+                    </div>
+                    <div class="mdui-collapse-item-body mdui-list mdui-list-dense" >
+                        <a href="#bdqx" class="mdui-list-item mdui-ripple mdui-list-item">班导师权限</a>
+                        <a href="#fdy" class="mdui-list-item mdui-ripple mdui-list-item">辅导员权限</a>
+                        <a href="#xgb" class="mdui-list-item mdui-ripple mdui-list-item">学工办权限</a>
+                        <a href="#jgb" class="mdui-list-item mdui-ripple mdui-list-item">教工办权限</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
         <div class="mdui-container-fluid">
-            <div id="example3-tab1" class="mdui-hidden">
+            <div id="bdqx">
                 <p>1</p>
                 <p>1</p>
                 <p>1</p>
@@ -91,7 +82,7 @@
                 <p>1</p>
                 <p>1</p>
             </div>
-            <div id="zjxg">
+            <div id="fdy">
                 <p>2</p>
                 <p>2</p>
                 <p>2</p>
@@ -108,6 +99,21 @@
                 <p>2</p>
                 <p>2</p>
                 <p>2</p>
+            </div>
+            <div id="xgb">
+                <p>3</p>
+            </div>
+            <div id="jgb">
+                <p>4</p>
+            </div>
+            <div id="newsubmit">
+                <p>5</p>
+            </div>
+            <div id="historyvocation">
+                <p>6</p>
+            </div>
+            <div id="countvocation">
+                <p>7</p>
             </div>
         </div>
     </div>
