@@ -1,0 +1,26 @@
+/* .mdui-textfield-focus .mdui-icon,.mdui-textfield-floating-label.mdui-textfield-focus .mdui-textfield-label{
+    color: #009688;
+}
+.mdui-textfield-focus .mdui-textfield-input,.mdui-textfield-focus .mdui-textfield-input:hover{
+    border-bottom: #009688;
+    -webkit-box-shadow:0 1px 0 0 #009688;
+    box-shadow:0 2px 0 0 #009688;
+} */
+.mdui-typo-title {
+    margin-left: 14.6%;
+}
+.login{
+    width: 80%;
+    margin-top: 10%;
+}
+.checkcode{
+    float: right;
+    position: relative;
+    top: -55px;
+}
+.checkcode span{
+    line-height: 24px;
+    font-size: 12px;
+    cursor: pointer;
+    display: block;
+}
