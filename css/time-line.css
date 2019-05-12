@@ -4,7 +4,7 @@ body {
 }
 html,body {
 	-webkit-text-size-adjust:none;
-	background:#f7f7f7;
+	background:#f7f7f7 url("./../image/release-bg.png") no-repeat right top;
 }
 div,form,input,textarea,p,ul,li,dl,dt,dd,h1,table,h2 {
 	padding:0;
@@ -94,14 +94,12 @@ hr {
 	margin-top: -10px;
 }
 .content {
-	/* padding: 50px 0; */
 	min-height: 720px;
-	/* background: #3a3c48 url("./../image/content-bg.png"); */
 	width: 100%;
 }
 .content .wrapper {
 	position: relative;
-	background: url("./../image/release-bg.png") no-repeat right top;
+	background: url("./../image/release-bg.png") no-repeat left top;
 	width: 85%;
 	margin: 0 auto;
 }
@@ -256,7 +254,7 @@ hr {
 }
 @media screen and (min-width: 320px) and (max-width : 480px){
 	.content .main{
-		background: url("./../image/line-bg.png") repeat-y 249px 0;
+		background: url("./../image/line-bg.png") repeat-y 90% 0;
 	}
 	.content .main .title{
 		position: absolute;
@@ -272,8 +270,14 @@ hr {
 	{
 		float: left;
 		display: block;
-		width: 400px;
+		width: 100%;
 		margin-left: 0px;
 		line-height: 24px;
 	}
+	.content .main .year .list ul li{
+		background: url(./../image/circle.png) no-repeat 94% 28%;
+    	padding: 30px 0;
+    	color: #a1a4b8
+	}
+	
 }

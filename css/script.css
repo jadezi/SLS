@@ -1,0 +1,10 @@
+html,body{
+    background: #f7f7f7f7 url("./../image/release-bg.png") no-repeat right top;
+}
+#content-footer {
+    padding: 30px;
+    margin-top: 80px;
+}
+.mdui-l-4{
+    line-height: 40px;
+}
