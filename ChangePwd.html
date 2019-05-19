@@ -37,7 +37,7 @@
 
 
         <div class="mc-drawer mdui-drawer " id="left-drawer">
-            <ul class="mdui-list" mdui-collapse="{accordion: true}" >
+            <ul class="mdui-list" mdui-collapse="{accordion: true}">
                 <li class="mdui-collapse-item ">
                     <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
                         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">event_available</i>
@@ -46,64 +46,121 @@
                     </a>
                     <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
                         <a href="my.html" class="mdui-list-item mdui-ripple mdui-click-captured ">消息中心</a>
-                        <a href="leave.html" class="mdui-list-item mdui-ripple mdui-click-captured">请假申请</a>
-                        <a href="#example3-tab3" class="mdui-list-item mdui-ripple mdui-click-captured">销假</a>
+                        <a href="leave.html" location="leaveRequest" class="mdui-list-item mdui-ripple">请假申请</a>
+                        <a href="withdraw.html" location="rbala" class="mdui-list-item mdui-ripple">销假</a>
+                        <a href="grade.html" class="mdui-list-item mdui-ripple">班级请假管理</a>
                     </ul>
                 </li>
 
-                <li class="mdui-collapse-item mdui-collapse-item">
-                    <a href="#cg" class="mdui-list-item mdui-ripple mdui-list-item ">
-                        <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
+                <li class="mdui-collapse-item mdui-collapse-item classguidance">
+                    <a href="Classguidance.html" class="mdui-list-item mdui-ripple mdui-list-item ">
+                        <i
+                            class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
                         <div class="mdui-list-item-content">所属班导</div>
                     </a>
                 </li>
 
-                <li class="mdui-collapse-item mdui-collapse-item mdui-collapse-item-open" >
+                <li class="mdui-collapse-item mdui-collapse-item mdui-collapse-item-open">
                     <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
                         <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-green">settings</i>
-                            <div class="mdui-list-item-content ">资料修改</div>
+                        <div class="mdui-list-item-content ">资料修改</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                     </a>
                     <ul class="mdui-collapse-item-body mdui-list mdui-list-dense" mdui-tab>
-                        <a href="#pwd" class="mdui-list-item mdui-ripple mdui-click-captured mdui-list-item-active">密码修改</a>
+                        <a href="#pwd"
+                            class="mdui-list-item mdui-ripple mdui-click-captured mdui-list-item-active">密码修改</a>
                         <a href="#tel" class="mdui-list-item mdui-ripple mdui-click-captured">联系电话</a>
                     </ul>
                 </li>
-                
+
             </ul>
         </div>
         <div class="mdui-container">
-            <div id="pwd">
-                <p>1</p>
-                <p>1</p>
-            </div>
-            <div id="tel">
-                <p>2</p>
-                <p>2</p>
-            </div>
-            
-        </div>
-        <div class="mdui-fab-wrapper mdui-fab-fixed " mdui-fab="{trigger:'hover'}">
-                <button class="mdui-fab  mdui-ripple mdui-color-pink-accent">
-                    <i class="mdui-icon material-icons">add</i>
-                    <i class="mdui-icon mdui-fab-opened material-icons">mode_edit</i>
-                </button>
-                <div class="mdui-fab-dial">
-                    <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange">
-                        <i class="mdui-icon material-icons">touch_app</i>
-                    </button>
+            <div class="mdui-row">
+                <div class="mdui-col-md-6 mdui-col-sm-4 mdui-col-offset-md-3 mdui-m-t-3">
+                    <div id="pwd">
+                        <div class="mdui-card">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">密码修改</div>
+                                <div class="mdui-card-primary-subtitle"></div>
+                            </div>
+                            <!-- 卡片的内容 -->
+                            <div class="mdui-card-content">
+                                <div class="mdui-textfield ">
+                                    <label class="mdui-textfield-label">密码</label>
+                                    <input class="mdui-textfield-input" type="password" required />
+                                    <div class="mdui-textfield-helper">请输入原密码</div>
+                                </div>
+                                <div class="mdui-textfield ">
+                                    <label class="mdui-textfield-label">密码</label>
+                                    <input class="mdui-textfield-input" type="password"
+                                        pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" required />
+                                    <div class="mdui-textfield-error">密码至少 6 位，且包含大小写字母</div>
+                                    <div class="mdui-textfield-helper">请输入至少 6 位，且包含大小写字母的密码</div>
+                                </div>
+                            </div>
+                            <!-- 卡片的按钮 -->
+                            <div class="mdui-card-actions">
+                                <button class="mdui-btn mdui-ripple" onclick="resetbtn()">取消</button>
+                                <button class="mdui-btn mdui-ripple">更改</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-col-md-6 mdui-col-sm-4 mdui-col-offset-md-3 ">
+                    <div id="tel">
+                            <div class="mdui-card">
+                                    <div class="mdui-card-primary">
+                                        <div class="mdui-card-primary-title">资料修改</div>
+                                        <div class="mdui-card-primary-subtitle"></div>
+                                    </div>
+                                    <!-- 卡片的内容 -->
+                                    <div class="mdui-card-content">
+                                        <div class="mdui-textfield ">
+                                            <label class="mdui-textfield-label">手机号</label>
+                                            <input class="mdui-textfield-input" type="text" required />
+                                            <div class="mdui-textfield-helper">请输入原密码</div>
+                                        </div>
+                                        <div class="mdui-textfield">
+                                                <label class="mdui-textfield-label">邮箱</label>
+                                                <input class="mdui-textfield-input" type="email" required/>
+                                                <div class="mdui-textfield-error">邮箱格式错误</div>
+                                              </div>
+                                    </div>
+                                    <!-- 卡片的按钮 -->
+                                    <div class="mdui-card-actions">
+                                        <button class="mdui-btn mdui-ripple" onclick="resetbtn()">取消</button>
+                                        <button class="mdui-btn mdui-ripple">更改</button>
+                                    </div>
+        
+                                </div>
+                    </div>
                 </div>
             </div>
+
+        </div>
+
+
+    </div>
+    <div class="mdui-fab-wrapper mdui-fab-fixed " mdui-fab="{trigger:'hover'}">
+        <button class="mdui-fab  mdui-ripple mdui-color-pink-accent">
+            <i class="mdui-icon material-icons">add</i>
+            <i class="mdui-icon mdui-fab-opened material-icons">mode_edit</i>
+        </button>
+        <div class="mdui-fab-dial">
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange">
+                <i class="mdui-icon material-icons">touch_app</i>
+            </button>
+        </div>
+    </div>
     </div>
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/mdui.min.js"></script>
+<script src="./js/changepwd.js"></script>
 <script>
-$('.mdui-click-captured').click(function(){
-    $(this).addClass("mdui-list-item-active");
-    $(this).siblings().removeClass("mdui-list-item-active");
-   
-})
+  
 </script>
 
 </html>

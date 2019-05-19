@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/mdui.min.css">
     <link rel="stylesheet" href="./css/script.css">
+    <link rel="stylesheet" href="./css/grade.css">
     <script src="./js/mdui.min.js"></script>
     <title>学生请假系统</title>
 </head>
 
 <body class="mdui-loaded mdui-drawer-body-left">
+    <!-- 顶部工具栏 -->
     <div class="mdui-appbar-with-toolbar mdui-theme-accent-pink mdui-theme-primary-indigo ">
-        <!-- 顶部工具栏 -->
         <div class="mdui-appbar mdui-appbar-fixed mdui-headroom mdui-headroom-pinned-toolbar">
             <div class="mdui-toolbar mdui-color-white mdui-color-theme">
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon"
@@ -43,13 +44,13 @@
                     </a>
                     <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
                         <a href="my.html" class="mdui-list-item mdui-ripple ">消息中心</a>
-                        <a class="mdui-list-item mdui-ripple mdui-list-item-active">请假申请</a>
-                        <a href="withdraw.html" class="mdui-list-item mdui-ripple">销假</a>
-                        <a href="grade.html" class="mdui-list-item mdui-ripple">班级请假管理</a>
+                        <a href="leave.html" class="mdui-list-item mdui-ripple ">请假申请</a>
+                        <a href="withdraw.html"  class="mdui-list-item mdui-ripple ">销假</a>
+                        <a href="javascript:void(0)" onclick="access()" class="mdui-list-item mdui-ripple mdui-list-item-active">班级请假管理</a>
                     </ul>
                 </li>
                 <li class="mdui-collapse-item">
-                    <a href="Classguidance.html" class="mdui-list-item mdui-ripple ">
+                    <a  href="Classguidance.html" class="mdui-list-item mdui-ripple ">
                         <i
                             class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
                         <div class="mdui-list-item-content">所属班导</div>
@@ -79,7 +80,7 @@
                         <div class="mdui-p-t-1">进度：<span class="progress-text">10%</span></div>
                     </div>
                     <div class="mdui-card-primary mdui-p-t-0">
-                        <div class="mdui-card-primary-title ">请假申请</div>
+                        <div class="mdui-card-primary-title ">夜自修请假申请</div>
                     </div>
                     <div class="mdui-card-content">
                         <div class="mdui-row">
@@ -88,19 +89,7 @@
                                 <div class="mdui-m-b-1 mdui-l-4">性别：<span>123</span></div>
                                 <div class="mdui-m-b-1 mdui-l-4">所属院系：<span>123</span></div>
                                 <div class="mdui-m-b-1 mdui-l-4">班导师：<span>123</span></div>
-                                <div>
-                                    <span class="mdui-float-left mdui-l-4">请假类型：</span>
-                                    <label class="mdui-radio mdui-m-r-3">
-                                        <input type="radio" name="vacation" value="0" />
-                                        <i class="mdui-radio-icon"></i>
-                                        <span>病假</span>
-                                    </label>
-                                    <label class="mdui-radio mdui-m-r-3">
-                                        <input type="radio" name="vacation" value="1" />
-                                        <i class="mdui-radio-icon"></i>
-                                        <span>事假</span>
-                                    </label>
-                                </div>
+                               
                                 <div class="" style="clear:both">
                                     <span class="mdui-float-left mdui-l-4">本人手机号：</span>
                                     <div class="mdui-textfield  mdui-p-t-0" style="width:50%">
@@ -112,6 +101,12 @@
                                 <div class="mdui-m-b-1 mdui-l-4">姓名：<span>123</span></div>
                                 <div class="mdui-m-b-1 mdui-l-4">班级：<span>123</span></div>
                                 <div class="mdui-m-b-1 mdui-l-4">辅导员：<span>123</span></div>
+                                <div class="" style="clear:both">
+                                    <span class="mdui-float-left mdui-l-4">请假人数：</span>
+                                    <div class="mdui-textfield  mdui-p-t-0" style="width:50%">
+                                        <input class="mdui-textfield-input" type="text" name="peoplenum" />
+                                    </div>
+                                </div>
                                 <div>
                                     <span class="mdui-float-left mdui-l-4">请假时间：</span>
                                     <div class="mdui-textfield mdui-p-t-0 mdui-float-left" style="width:20%">
@@ -125,53 +120,28 @@
                                     </div>
                                 </div>
 
-                                <div class="mdui-m-b-1">
-                                    <span class="mdui-float-left mdui-l-4">请假课程：</span>
-                                    <select class="mdui-select mdui-float-left" mdui-select style="font-size:12px"
-                                        name="startclass" id="startclass">
-                                        <option value="0">请选择</option>
-                                        <option value="1">第一节课</option>
-                                        <option value="2">第二节课</option>
-                                        <option value="3">第三节课</option>
-                                        <option value="4">第四节课</option>
-                                        <option value="5">第五节课</option>
-                                        <option value="6">第六节课</option>
-                                        <option value="7">第七节课</option>
-                                        <option value="8">第八节课</option>
-                                        <option value="9">第九节课</option>
-                                        <option value="10">第十节课</option>
-                                        <option value="11">第十一节课</option>
-                                        <option value="12">第十二节课</option>
-                                    </select>
-                                    <span class="mdui-m-l-1 mdui-m-r-1 mdui-l-4">——</span>
-                                    <select class="mdui-select" style="font-size:12px" name="endclass" id="endclass">
-                                        <option value="0">请选择</option>
-                                        <option value="1">第一节课</option>
-                                        <option value="2">第二节课</option>
-                                        <option value="3">第三节课</option>
-                                        <option value="4">第四节课</option>
-                                        <option value="5">第五节课</option>
-                                        <option value="6">第六节课</option>
-                                        <option value="7">第七节课</option>
-                                        <option value="8">第八节课</option>
-                                        <option value="9">第九节课</option>
-                                        <option value="10">第十节课</option>
-                                        <option value="11">第十一节课</option>
-                                        <option value="12">第十二节课</option>
-                                    </select>
-                                </div>
-                                <div class="">
-                                    <span class="mdui-float-left mdui-l-4">父/母手机号：</span>
-                                    <div class="mdui-textfield  mdui-p-t-0" style="width:50%">
-                                        <input class="mdui-textfield-input" type="text" name="urgenttel" />
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="mdui-textfield">
                             <label class="mdui-textfield-label">请假理由</label>
                             <textarea class="mdui-textfield-input" name="stureason"></textarea>
                         </div>
+                        <div class="mdui-textfield">
+                            <label class="mdui-textfield-label">请假同学名单</label>
+                           
+                            <a href="./download/normal.xls" download="学生请假模板" class="download-btn mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink-a400    mdui-float-left">
+                                    <span>下载名单模板</span>
+                            </a>
+                            <div class="upload-btn mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-float-left  mdui-m-l-2">
+                                    <span>上传文件</span>
+                                    <input type="file" class="uploadfile" name="uploadfile" accept=".xls,.xlsx" onchange="getFileName()"/>
+                                </div>
+                            <div>
+                                <span class="mdui-m-l-1 mdui-l-37" id="filename"></span>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="mdui-card-content">
                         <div class="mdui-m-b-1 mdui-l-4">
@@ -194,28 +164,27 @@
                             disabled>下一步</button>
                     </div>
                 </div>
-
                 <div class="mdui-card mdui-m-t-5 mdui-p-b-1 mdui-hidden card-sure">
-                    <div class="mdui-card-header" style="height:auto;">
-                    </div>
-                    <div class="mdui-card-primary mdui-p-t-0">
-                        <div class="mdui-card-primary-title ">请假申请结果</div>
-                    </div>
-                    <div class="mdui-card-content">
-                        <div class="mdui-center" style="width:200px;height: 250px;">
-                            <div class="div11" >
-                                <img src="./image/duihao.png" />
-                                <div class="div22"></div>
-                            </div>
-                            <h1 class="mdui-center" style="width:114px">申请成功</h1>
+                        <div class="mdui-card-header" style="height:auto;">
                         </div>
-                        
+                        <div class="mdui-card-primary mdui-p-t-0">
+                            <div class="mdui-card-primary-title ">请假申请结果</div>
+                        </div>
+                        <div class="mdui-card-content">
+                            <div class="mdui-center" style="width:200px;height: 250px;">
+                                <div class="div11" >
+                                    <img src="./image/duihao.png" />
+                                    <div class="div22"></div>
+                                </div>
+                                <h1 class="mdui-center" style="width:114px">申请成功</h1>
+                            </div>
+                            
+                        </div>
+                        <div class="mdui-card-actions">
+                                <button class="mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent btn-over mdui-center"
+                                >确定</button>
+                        </div>
                     </div>
-                    <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent btn-over mdui-center"
-                            >确定</button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="mdui-color-theme" id="content-footer">Copyright</div>
@@ -235,9 +204,9 @@
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/mdui.min.js"></script>
-<script src="/js/leave.js"></script>
+<script src="./js/grade.js"></script>
 <script>
-
-</script>
+   
+     </script>
 
 </html>

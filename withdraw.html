@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/mdui.min.css">
+    <link rel="stylesheet" href="./css/script.css">
+    <script src="./js/mdui.min.js"></script>
+    <title>学生请假系统</title>
+</head>
+
+<body class="mdui-loaded mdui-drawer-body-left">
+    <!-- 顶部工具栏 -->
+    <div class="mdui-appbar-with-toolbar mdui-theme-accent-pink mdui-theme-primary-indigo ">
+        <div class="mdui-appbar mdui-appbar-fixed mdui-headroom mdui-headroom-pinned-toolbar">
+            <div class="mdui-toolbar mdui-color-white mdui-color-theme">
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon"
+                    mdui-drawer="{target: '#left-drawer', swipe: true}">
+                    <i class="mdui-icon material-icons">menu</i>
+                </a>
+                <a href="javascript:;" class="mdui-typo-title">学生请假系统</a>
+                <div class="mdui-toolbar-spacer"></div>
+                <a href="javascript:void();" class="mdui-btn mdui-btn-icon" onclick="refresh()">
+                    <i class="mdui-icon material-icons">refresh</i>
+                </a>
+                <a href="javascript:;" class="mdui-typo-title mdui-typo-body-2">欢迎，123</a>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                    <i class="mdui-icon material-icons">exit_to_app</i>
+                </a>
+
+            </div>
+        </div>
+        <!-- 左侧抽屉导航 -->
+        <div class="mc-drawer mdui-drawer " id="left-drawer">
+            <ul class="mdui-list" mdui-collapse="{accordion: true}">
+                <li class="mdui-collapse-item mdui-collapse-item-open">
+                    <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">event_available</i>
+                        <div class="mdui-list-item-content">请假管理</div>
+                        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a href="my.html" class="mdui-list-item mdui-ripple ">消息中心</a>
+                        <a href="leave.html" class="mdui-list-item mdui-ripple ">请假申请</a>
+                        <a href="withdraw.html"  class="mdui-list-item mdui-ripple mdui-list-item-active">销假</a>
+                        <a href="grade.html" class="mdui-list-item mdui-ripple">班级请假管理</a>
+                    </ul>
+                </li>
+                <li class="mdui-collapse-item">
+                    <a href="Classguidance.html" class="mdui-list-item mdui-ripple ">
+                        <i
+                            class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
+                        <div class="mdui-list-item-content">所属班导</div>
+                    </a>
+                </li>
+                <li class="mdui-collapse-item">
+                    <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-green">settings</i>
+                        <div class="mdui-list-item-content">资料修改</div>
+                        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a href="./ChangePwd.html" class="mdui-list-item mdui-ripple mdui-list-item">密码修改</a>
+                        <li class="mdui-list-item mdui-ripple">联系电话</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- 主体内容 -->
+        <div class="mdui-container">
+            <div class="mdui-row">
+                <div class="mdui-col-sm-6  mdui-col-xs-6">
+                        <div class="mdui-card  mdui-m-t-5 mdui-p-b-1">
+                                <!-- 卡片的标题和副标题 -->
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">销假</div>
+                                    <div class="mdui-card-primary-subtitle">请假时间：<span>2019-01-01</span><span class="mdui-p-l-1 mdui-p-r-1">至</span><span>2019-02-02</span></div>
+                                </div>
+            
+                                <!-- 卡片的内容 -->
+                                <div class="mdui-card-content">
+                                    <span>请假理由：</span>
+                                    <div>
+                                        生病住院
+                                    </div>
+                                </div>
+            
+                                <!-- 卡片的按钮 -->
+                                <div class="mdui-card-actions">
+                                    <button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-m-l-1">销假</button>
+                                </div>
+            
+                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-color-theme" id="content-footer">Copyright</div>
+        <!-- 浮动菜单按钮 -->
+        <div class="mdui-fab-wrapper mdui-fab-fixed " mdui-fab="{trigger:'hover'}">
+            <button class="mdui-fab  mdui-ripple mdui-color-pink-accent">
+                <i class="mdui-icon material-icons">add</i>
+                <i class="mdui-icon mdui-fab-opened material-icons">mode_edit</i>
+            </button>
+            <div class="mdui-fab-dial">
+                <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange">
+                    <i class="mdui-icon material-icons">touch_app</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/mdui.min.js"></script>
+<script>
+   
+     </script>
+
+</html>

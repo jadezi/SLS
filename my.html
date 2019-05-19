@@ -53,12 +53,13 @@
                         <a href="#info" location="info"
                             class="mdui-list-item mdui-ripple mdui-list-item-active">消息中心</a>
                         <a href="leave.html" location="leaveRequest" class="mdui-list-item mdui-ripple">请假申请</a>
-                        <a href="#rbala" location="rbala" class="mdui-list-item mdui-ripple">销假</a>
+                        <a href="withdraw.html" location="rbala" class="mdui-list-item mdui-ripple">销假</a>
+                        <a href="grade.html" class="mdui-list-item mdui-ripple">班级请假管理</a>
                     </ul>
                 </li>
 
                 <li class="mdui-collapse-item mdui-collapse-item">
-                    <a location="cg" class="mdui-list-item mdui-ripple mdui-list-item ">
+                    <a href="Classguidance.html" class="mdui-list-item mdui-ripple mdui-list-item ">
                         <i
                             class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
                         <div class="mdui-list-item-content">所属班导</div>
@@ -82,242 +83,270 @@
         <!-- 右侧内容 -->
         <div class="mdui-container">
             <div class="mdui-container-fluid  wrapper">
-                <!-- 消息选项卡 -->
-                <div id="message" class="mdui-panel-center mdui-m-t-5" style="width: 80%">
-                    <!-- 消息内容 -->
-                    <div class="mdui-card mdui-m-b-1">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" src="image/avatar1.jpg" />
-                            <div class="mdui-card-header-title">陈明</div>
-                            <div class="mdui-card-header-subtitle">联系电话：18158510000</div>
-                        </div>
-                        <div class="mdui-card-primary">
-                            <div class="mdui-card-primary-title">请假申请结果及老师意见</div>
-                            <div class="mdui-card-primary-subtitle">请假人：小明</div>
-                        </div>
-                        <div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
-                    </div>
-                    <!-- 消息内容 -->
-                    <div class="mdui-card mdui-m-b-1">
-                        <div class="mdui-card-header">
-                            <img class="mdui-card-header-avatar" src="image/avatar1.jpg" />
-                            <div class="mdui-card-header-title">陈明</div>
-                            <div class="mdui-card-header-subtitle">联系电话：18158510000</div>
-                        </div>
-                        <div class="mdui-card-primary">
-                            <div class="mdui-card-primary-title">请假申请结果及老师意见</div>
-                            <div class="mdui-card-primary-subtitle">请假人：小明</div>
-                        </div>
-                        <div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
-                    </div>
-                </div>
-                <!-- 进度查询选项卡 -->
-                <div id="progress" class="mdui-panel-center mdui-m-t-5" style="width: 80%">
-                    <div class="mdui-card mdui-m-b-1">
-                        <div class="mdui-card-header" style="height:auto;">
-                            <div class="mdui-progress ">
-                                <div class="mdui-progress-determinate mdui-color-pink" style="width: 30%;"></div>
-                                
-                              </div>
-                              <div class="mdui-p-t-1">进度：<span>30%</span></div>
-                        </div>
-                        <div class="mdui-card-primary mdui-p-t-0" >
-                            <div class="mdui-card-primary-title ">审核中</div>
-                            <div class="mdui-card-primary-subtitle">
-                                <span class="">请假人：<span>小明</span></span><br/>
-                                <span class="">请假类型：<span>病假</span></span><br/>
-                                <span class="">请假时间：<span>2019/05/10</span>-<span>2019/05/11</span></span><br/>
-                                <span class="">请假节数：<span>1，2，3</span>
+                <div class="mdui-row">
+                    <div class="mdui-col-xs-12 mdui-cos-sm-6">
+                        <!-- 消息选项卡 -->
+                        <div id="message" class="mdui-panel-center mdui-m-t-5" style="width: 80%">
+                            <!-- 消息内容 -->
+                            <div class="mdui-card mdui-m-b-1">
+                                <div class="mdui-card-header">
+                                    <img class="mdui-card-header-avatar" src="image/avatar1.jpg" />
+                                    <div class="mdui-card-header-title">陈明</div>
+                                    <div class="mdui-card-header-subtitle">联系电话：18158510000</div>
+                                </div>
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">请假申请结果及老师意见</div>
+                                    <div class="mdui-card-primary-subtitle">请假人：小明</div>
+                                </div>
+                                <div class="mdui-card-content">
+                                    <span>请假理由：</span>
+                                    <div>生病住院</div>
+                                    <span>审核结果：</span>
+                                    <div>已通过</div>
+                                    <span>教师回复：</span>
+                                    <div>无</div>
+                                </div>
+
+                            </div>
+                            <!-- 消息内容 -->
+                            <div class="mdui-card mdui-m-b-1">
+                                <div class="mdui-card-header">
+                                    <img class="mdui-card-header-avatar" src="image/avatar1.jpg" />
+                                    <div class="mdui-card-header-title">陈明</div>
+                                    <div class="mdui-card-header-subtitle">联系电话：18158510000</div>
+                                </div>
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">请假申请结果及老师意见</div>
+                                    <div class="mdui-card-primary-subtitle">请假人：小明</div>
+                                </div>
+                                <div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
                             </div>
                         </div>
-                        <div class="mdui-card-content">
-                            <span>请假理由：<span>123</span></span>
-                        </div>
-                        <div class="mdui-card-content">
-                                <span>老师回复：<span>123</span></span>
-                        </div>
-                        <div class="mdui-card-content">
-                                <span>学工办回复：<span>123</span></span>
-                        </div>
-                        <div class="mdui-card-content">
-                                <span>回复：<span>123</span></span>
-                        </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple">下一步</button>
-                            <button class="mdui-btn mdui-ripple">action 2</button>
-                          </div>
-                    </div>
-                </div>
-                <!-- 历史记录选项卡 -->
-                <div id="history" class="mdui-panel-center mdui-m-t-5">
-                    <div class="content">
-                        <div class="wrapper">
-                            <div class="light"><i></i></div>
-                            <div class="main">
-                                <h1 class="title mdui-hidden-xs-down">请假记录</h1>
-                                <div class="year">
-                                    <h2><a href="#">2018年<i></i></a></h2>
-                                    <div class="list">
-                                        <ul>
-                                            <li class="cls highlight">
-                                                <p class="date">3月26日</p>
-                                                <div class="intro">
-                                                    <div class="mdui-panel" mdui-panel>
-                                                        <div class="mdui-panel-item mdui-panel-item-open">
-                                                            <div class="mdui-panel-item-header">
-                                                                <div class="mdui-panel-item-title">Start and end dates
-                                                                </div>
-                                                                <div class="mdui-panel-item-summary">2019/05/10</div>
-                                                                <div class="mdui-panel-item-summary">End date: Not set
-                                                                </div>
-                                                                <i
-                                                                    class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                                                            </div>
-                                                            <div class="mdui-panel-item-body">
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <div class="mdui-panel-item-actions">
-                                                                    <button class="mdui-btn mdui-ripple"
-                                                                        mdui-panel-item-close>关闭</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="cls">
-                                                <p class="date">3月19日</p>
-                                                <div class="intro">
-                                                    <div class="mdui-panel" mdui-panel>
-                                                        <div class="mdui-panel-item">
-                                                            <div class="mdui-panel-item-header">
-                                                                <div class="mdui-panel-item-title">Start and end dates
-                                                                </div>
-                                                                <div class="mdui-panel-item-summary">2019/05/10</div>
-                                                                <div class="mdui-panel-item-summary">End date: Not set
-                                                                </div>
-                                                                <i
-                                                                    class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                                                            </div>
-                                                            <div class="mdui-panel-item-body">
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <div class="mdui-panel-item-actions">
-                                                                    <button class="mdui-btn mdui-ripple"
-                                                                        mdui-panel-item-close>关闭</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="cls">
-                                                <p class="date">3月12日</p>
-                                                <div class="intro">
-                                                    <div class="mdui-panel" mdui-panel>
-                                                        <div class="mdui-panel-item">
-                                                            <div class="mdui-panel-item-header">
-                                                                <div class="mdui-panel-item-title">Start and end dates
-                                                                </div>
-                                                                <div class="mdui-panel-item-summary">2019/05/10</div>
-                                                                <div class="mdui-panel-item-summary">End date: Not set
-                                                                </div>
-                                                                <i
-                                                                    class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                                                            </div>
-                                                            <div class="mdui-panel-item-body">
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <div class="mdui-panel-item-actions">
-                                                                    <button class="mdui-btn mdui-ripple"
-                                                                        mdui-panel-item-close>关闭</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="cls">
-                                                <p class="date">3月5日</p>
-                                                <div class="intro">
-                                                    <div class="mdui-panel" mdui-panel>
-                                                        <div class="mdui-panel-item">
-                                                            <div class="mdui-panel-item-header">
-                                                                <div class="mdui-panel-item-title">Start and end dates
-                                                                </div>
-                                                                <div class="mdui-panel-item-summary">2019/05/10</div>
-                                                                <div class="mdui-panel-item-summary">End date: Not set
-                                                                </div>
-                                                                <i
-                                                                    class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                                                            </div>
-                                                            <div class="mdui-panel-item-body">
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <div class="mdui-panel-item-actions">
-                                                                    <button class="mdui-btn mdui-ripple"
-                                                                        mdui-panel-item-close>关闭</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                        <!-- 进度查询选项卡 -->
+                        <div id="progress" class="mdui-panel-center mdui-m-t-5" style="width: 80%">
+                            <div class="mdui-card mdui-m-b-1">
+                                <div class="mdui-card-header" style="height:auto;">
+                                    <div class="mdui-progress ">
+                                        <div class="mdui-progress-determinate mdui-color-pink" style="width: 30%;">
+                                        </div>
 
-                                        </ul>
+                                    </div>
+                                    <div class="mdui-p-t-1">进度：<span>30%</span></div>
+                                </div>
+                                <div class="mdui-card-primary mdui-p-t-0">
+                                    <div class="mdui-card-primary-title ">审核中</div>
+                                    <div class="mdui-card-primary-subtitle">
+                                        <span class="">请假人：<span>小明</span></span><br />
+                                        <span class="">请假类型：<span>病假</span></span><br />
+                                        <span class="">请假时间：<span>2019/05/10</span>-<span>2019/05/11</span></span><br />
+                                        <span class="">请假节数：<span>1，2，3</span>
                                     </div>
                                 </div>
-                                <div class="year">
-                                    <h2><a href="#">2016年以前<i></i></a></h2>
-                                    <div class="list">
-                                        <ul>
-                                            <li class="cls">
-                                                <p class="date">8月</p>
-                                                <div class="intro">
-                                                    <div class="mdui-panel" mdui-panel>
-                                                        <div class="mdui-panel-item">
-                                                            <div class="mdui-panel-item-header">
-                                                                <div class="mdui-panel-item-title">Start and end dates
-                                                                </div>
-                                                                <div class="mdui-panel-item-summary">2019/05/10</div>
-                                                                <div class="mdui-panel-item-summary">End date: Not set
-                                                                </div>
-                                                                <i
-                                                                    class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                                                            </div>
-                                                            <div class="mdui-panel-item-body">
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <p>Third content</p>
-                                                                <div class="mdui-panel-item-actions">
-                                                                    <button class="mdui-btn mdui-ripple"
-                                                                        mdui-panel-item-close>关闭</button>
+                                <div class="mdui-card-content">
+                                    <span>请假理由：<span>123</span></span>
+                                </div>
+                                <div class="mdui-card-content">
+                                    <span>老师回复：<span>123</span></span>
+                                </div>
+                                <div class="mdui-card-content">
+                                    <span>学工办回复：<span>123</span></span>
+                                </div>
+                                <div class="mdui-card-content">
+                                    <span>回复：<span>123</span></span>
+                                </div>
+                                <div class="mdui-card-actions">
+                                    <button class="mdui-btn mdui-ripple">下一步</button>
+                                    <button class="mdui-btn mdui-ripple">action 2</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 历史记录选项卡 -->
+                        <div id="history" class="mdui-panel-center mdui-m-t-5">
+                            <div class="content">
+                                <div class="wrapper">
+                                    <div class="light"><i></i></div>
+                                    <div class="main">
+                                        <h1 class="title mdui-hidden-xs-down">请假记录</h1>
+                                        <div class="year">
+                                            <h2><a href="#">2018年<i></i></a></h2>
+                                            <div class="list">
+                                                <ul>
+                                                    <li class="cls highlight">
+                                                        <p class="date">3月26日</p>
+                                                        <div class="intro">
+                                                            <div class="mdui-panel" mdui-panel>
+                                                                <div class="mdui-panel-item mdui-panel-item-open">
+                                                                    <div class="mdui-panel-item-header">
+                                                                        <div class="mdui-panel-item-title">Start and end
+                                                                            dates
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">2019/05/10
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">End date:
+                                                                            Not set
+                                                                        </div>
+                                                                        <i
+                                                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                                                    </div>
+                                                                    <div class="mdui-panel-item-body">
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <div class="mdui-panel-item-actions">
+                                                                            <button class="mdui-btn mdui-ripple"
+                                                                                mdui-panel-item-close>关闭</button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                    </li>
+                                                    <li class="cls">
+                                                        <p class="date">3月19日</p>
+                                                        <div class="intro">
+                                                            <div class="mdui-panel" mdui-panel>
+                                                                <div class="mdui-panel-item">
+                                                                    <div class="mdui-panel-item-header">
+                                                                        <div class="mdui-panel-item-title">Start and end
+                                                                            dates
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">2019/05/10
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">End date:
+                                                                            Not set
+                                                                        </div>
+                                                                        <i
+                                                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                                                    </div>
+                                                                    <div class="mdui-panel-item-body">
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <div class="mdui-panel-item-actions">
+                                                                            <button class="mdui-btn mdui-ripple"
+                                                                                mdui-panel-item-close>关闭</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="cls">
+                                                        <p class="date">3月12日</p>
+                                                        <div class="intro">
+                                                            <div class="mdui-panel" mdui-panel>
+                                                                <div class="mdui-panel-item">
+                                                                    <div class="mdui-panel-item-header">
+                                                                        <div class="mdui-panel-item-title">Start and end
+                                                                            dates
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">2019/05/10
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">End date:
+                                                                            Not set
+                                                                        </div>
+                                                                        <i
+                                                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                                                    </div>
+                                                                    <div class="mdui-panel-item-body">
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <div class="mdui-panel-item-actions">
+                                                                            <button class="mdui-btn mdui-ripple"
+                                                                                mdui-panel-item-close>关闭</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="cls">
+                                                        <p class="date">3月5日</p>
+                                                        <div class="intro">
+                                                            <div class="mdui-panel" mdui-panel>
+                                                                <div class="mdui-panel-item">
+                                                                    <div class="mdui-panel-item-header">
+                                                                        <div class="mdui-panel-item-title">Start and end
+                                                                            dates
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">2019/05/10
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">End date:
+                                                                            Not set
+                                                                        </div>
+                                                                        <i
+                                                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                                                    </div>
+                                                                    <div class="mdui-panel-item-body">
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <div class="mdui-panel-item-actions">
+                                                                            <button class="mdui-btn mdui-ripple"
+                                                                                mdui-panel-item-close>关闭</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="year">
+                                            <h2><a href="#">2016年以前<i></i></a></h2>
+                                            <div class="list">
+                                                <ul>
+                                                    <li class="cls">
+                                                        <p class="date">8月</p>
+                                                        <div class="intro">
+                                                            <div class="mdui-panel" mdui-panel>
+                                                                <div class="mdui-panel-item">
+                                                                    <div class="mdui-panel-item-header">
+                                                                        <div class="mdui-panel-item-title">Start and end
+                                                                            dates
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">2019/05/10
+                                                                        </div>
+                                                                        <div class="mdui-panel-item-summary">End date:
+                                                                            Not set
+                                                                        </div>
+                                                                        <i
+                                                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                                                    </div>
+                                                                    <div class="mdui-panel-item-body">
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                        <p>Third content</p>
+                                                                            <p>Third content</p>
+                                                                        <div class="mdui-panel-item-actions">
+                                                                            <button class="mdui-btn mdui-ripple"
+                                                                                mdui-panel-item-close>关闭</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -325,6 +354,7 @@
                     </div>
                 </div>
             </div>
+
 
 
         </div>
@@ -347,6 +377,9 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/mdui.min.js"></script>
 <script src="./js/my.js"></script>
-<script></script>
+<script>
+    var maxwidth = $("#content-footer").outerWidth();
+    //console.log(maxwidth);
+</script>
 
 </html>

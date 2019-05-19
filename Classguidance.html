@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/mdui.min.css">
+    <link rel="stylesheet" href="./css/script.css">
     <script src="./js/mdui.min.js"></script>
     <title>学生请假系统</title>
 </head>
@@ -21,9 +22,9 @@
                 </a>
                 <a href="javascript:;" class="mdui-typo-title">学生请假系统</a>
                 <div class="mdui-toolbar-spacer"></div>
-                    <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-                        <i class="mdui-icon material-icons">search</i>
-                    </a>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                    <i class="mdui-icon material-icons">search</i>
+                </a>
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon">
                     <i class="mdui-icon material-icons">refresh</i>
                 </a>
@@ -42,34 +43,91 @@
                         <div class="mdui-list-item-content">请假管理</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                     </a>
-                    <ul class="mdui-collapse-item-body mdui-list mdui-list-dense" mdui-tab>
-                        <a href="student.html" class="mdui-list-item mdui-ripple ">消息中心</a>
-                        <li class="mdui-list-item mdui-ripple">请假申请</li>
-                        <li class="mdui-list-item mdui-ripple">销假</li>
+                    <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a href="my.html" class="mdui-list-item mdui-ripple ">消息中心</a>
+                        <a href="leave.html" location="leaveRequest" class="mdui-list-item mdui-ripple">请假申请</a>
+                        <a href="withdraw.html" location="rbala" class="mdui-list-item mdui-ripple">销假</a>
+                        <a href="grade.html" class="mdui-list-item mdui-ripple">班级请假管理</a>
                     </ul>
                 </li>
                 <li class="mdui-collapse-item">
                     <a class="mdui-list-item mdui-ripple mdui-list-item-active">
-                        <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
+                        <i
+                            class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-blue">supervisor_account</i>
                         <div class="mdui-list-item-content">所属班导</div>
                     </a>
                 </li>
                 <li class="mdui-collapse-item">
                     <a class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                            <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-green">settings</i>
-                            <div class="mdui-list-item-content">资料修改</div>
+                        <i class="mdui-list-item-icon mdui-icon material-icons  mdui-text-color-green">settings</i>
+                        <div class="mdui-list-item-content">资料修改</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                     </a>
                     <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                        <a href="./ChangePwd.html" class="mdui-list-item mdui-ripple mdui-list-item">密码修改</a>
-                        <li class="mdui-list-item mdui-ripple">联系电话</li>
+                        <a href="./ChangePwd.html#pwd" class="mdui-list-item mdui-ripple mdui-list-item">密码修改</a>
+                        <a href="./ChangePwd.html#tel" class="mdui-list-item mdui-ripple">联系电话</a>
                     </ul>
-                </li>  
+                </li>
             </ul>
         </div>
         <!-- 主体内容 -->
-        <div class="mdui-container-fluid">
-        
+        <div class="mdui-container">
+            <div class="mdui-row">
+                <div class="mdui-col-sm-6 mdui-col-md-4 mdui-m-t-2">
+                    <div class="mdui-card ">
+                        <!-- 卡片头部，包含头像、标题、副标题 -->
+                        <div class="mdui-card-header">
+                            <img class="mdui-card-header-avatar" src="image/avatar1.jpg" />
+                            <div class="mdui-card-header-title">陈铭</div>
+                            <div class="mdui-card-header-subtitle">联系电话：<span>18158510123</span></div>
+                        </div>
+                        <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+                        <div class="mdui-card-media">
+                            <img src="image/card.jpg" />
+                            <!-- 卡片中可以包含一个或多个菜单按钮 -->
+                            <div class="mdui-card-menu">
+                                <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
+                                    <i class="mdui-icon material-icons">share</i></button>
+                            </div>
+                        </div>
+                        <!-- 卡片的标题和副标题 -->
+                        <div class="mdui-card-primary">
+                            <div class="mdui-card-primary-title">班导师</div>
+                            <div class="mdui-card-primary-subtitle">SL603</div>
+                        </div>
+                        <!-- 卡片的内容 -->
+                        <div class="mdui-card-content">有紧急情况请电话联系我！</div>
+                    </div>
+                </div>
+                <div class="mdui-col-sm-6 mdui-col-md-4 mdui-m-t-2">
+                    <div class="mdui-card">
+                            <!-- 卡片头部，包含头像、标题、副标题 -->
+                            <div class="mdui-card-header">
+                                <img class="mdui-card-header-avatar" src="image/avatar1.jpg" />
+                                <div class="mdui-card-header-title">马天元</div>
+                                <div class="mdui-card-header-subtitle">联系电话：<span>13758510123</span></div>
+                            </div>
+                            <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+                            <div class="mdui-card-media">
+                                <img src="image/card.jpg" />
+                                <!-- 卡片中可以包含一个或多个菜单按钮 -->
+                                <div class="mdui-card-menu">
+                                    <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
+                                        <i class="mdui-icon material-icons">share</i></button>
+                                </div>
+                            </div>
+                            <!-- 卡片的标题和副标题 -->
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">班导师</div>
+                                <div class="mdui-card-primary-subtitle">SL403</div>
+                            </div>
+                            <!-- 卡片的内容 -->
+                            <div class="mdui-card-content">有紧急情况请电话联系我！</div>
+                            
+                        </div>
+                </div>
+
+            </div>
         </div>
         <!-- 浮动菜单按钮 -->
         <div class="mdui-fab-wrapper mdui-fab-fixed " mdui-fab="{trigger:'hover'}">

@@ -1,0 +1,15 @@
+.upload-btn input[type='file']{
+    position: absolute;
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 91px;
+    height: 37px;
+    
+}
+
+.upload-btn{
+    cursor: pointer;
+}
