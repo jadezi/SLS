@@ -5,6 +5,10 @@ html,body{
     padding: 30px;
     margin-top: 80px;
 }
+#content-footer div, #content-footer div a{
+    width: 173px;
+    color: white;
+}
 .mdui-l-4{
     line-height: 40px;
 }
@@ -13,4 +17,10 @@ html,body{
 }
 .mdui-container{
     min-height: 414px;
+}
+.peoplecount{
+    font-family: huakang;
+    font-size: 65px;
+    width: 64px;
+    padding: 18px;
 }

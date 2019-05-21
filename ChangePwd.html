@@ -35,7 +35,7 @@
             </div>
         </div>
 
-
+        <!-- 左侧菜单 -->
         <div class="mc-drawer mdui-drawer " id="left-drawer">
             <ul class="mdui-list" mdui-collapse="{accordion: true}">
                 <li class="mdui-collapse-item ">
@@ -75,6 +75,7 @@
 
             </ul>
         </div>
+        <!-- 主体内容 -->
         <div class="mdui-container">
             <div class="mdui-row">
                 <div class="mdui-col-md-6 mdui-col-sm-4 mdui-col-offset-md-3 mdui-m-t-3">
@@ -110,38 +111,35 @@
                 </div>
                 <div class="mdui-col-md-6 mdui-col-sm-4 mdui-col-offset-md-3 ">
                     <div id="tel">
-                            <div class="mdui-card">
-                                    <div class="mdui-card-primary">
-                                        <div class="mdui-card-primary-title">资料修改</div>
-                                        <div class="mdui-card-primary-subtitle"></div>
-                                    </div>
-                                    <!-- 卡片的内容 -->
-                                    <div class="mdui-card-content">
-                                        <div class="mdui-textfield ">
-                                            <label class="mdui-textfield-label">手机号</label>
-                                            <input class="mdui-textfield-input" type="text" required />
-                                            <div class="mdui-textfield-helper">请输入原密码</div>
-                                        </div>
-                                        <div class="mdui-textfield">
-                                                <label class="mdui-textfield-label">邮箱</label>
-                                                <input class="mdui-textfield-input" type="email" required/>
-                                                <div class="mdui-textfield-error">邮箱格式错误</div>
-                                              </div>
-                                    </div>
-                                    <!-- 卡片的按钮 -->
-                                    <div class="mdui-card-actions">
-                                        <button class="mdui-btn mdui-ripple" onclick="resetbtn()">取消</button>
-                                        <button class="mdui-btn mdui-ripple">更改</button>
-                                    </div>
-        
+                        <div class="mdui-card">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">资料修改</div>
+                                <div class="mdui-card-primary-subtitle"></div>
+                            </div>
+                            <!-- 卡片的内容 -->
+                            <div class="mdui-card-content">
+                                <div class="mdui-textfield ">
+                                    <label class="mdui-textfield-label">手机号</label>
+                                    <input class="mdui-textfield-input" type="text" required />
+                                    <div class="mdui-textfield-helper">请输入新手机号</div>
                                 </div>
+                                <div class="mdui-textfield">
+                                    <label class="mdui-textfield-label">邮箱</label>
+                                    <input class="mdui-textfield-input" type="email" required />
+                                    <div class="mdui-textfield-error">邮箱格式错误</div>
+                                </div>
+                            </div>
+                            <!-- 卡片的按钮 -->
+                            <div class="mdui-card-actions">
+                                <button class="mdui-btn mdui-ripple" onclick="resetbtn()">取消</button>
+                                <button class="mdui-btn mdui-ripple">更改</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
-
+        <div class="mdui-color-theme" id="content-footer"><div class="mdui-center">Copyright &copy; <a href="https://github.com/jadezi/SLS">jade.zi</a> & sohl</div></div>
     </div>
     <div class="mdui-fab-wrapper mdui-fab-fixed " mdui-fab="{trigger:'hover'}">
         <button class="mdui-fab  mdui-ripple mdui-color-pink-accent">
@@ -160,7 +158,7 @@
 <script src="./js/mdui.min.js"></script>
 <script src="./js/changepwd.js"></script>
 <script>
-  
+
 </script>
 
 </html>

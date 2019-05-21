@@ -6,8 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/mdui.min.css">
+    <link rel="stylesheet" href="./css/script.css">
     <script src="./js/mdui.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js">
+    </script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js">
+    </script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
     <title>学生请假系统</title>
+    <style>
+        @font-face {
+            font-family: 'huakang';
+            src: url('./fonts/huakang.ttf');
+        }
+    </style>
 </head>
 
 <body class="mdui-loaded mdui-drawer-body-left">
@@ -34,17 +51,18 @@
 
 
         <div class="mc-drawer mdui-drawer " id="left-drawer">
-            <div class="mdui-list" mdui-collapse="{accordion: true}" >
-                <div class="mdui-collapse-item mdui-collapse-item-open" >
+            <div class="mdui-list" mdui-collapse="{accordion: true}">
+                <div class="mdui-collapse-item mdui-collapse-item-open">
                     <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-light-blue">insert_invitation</i>
+                        <i
+                            class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-light-blue">insert_invitation</i>
                         <div class="mdui-list-item-content">学生请假管理</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                     </div>
                     <div class="mdui-collapse-item-body mdui-list">
-                        <a href="#newsubmit" class="mdui-list-item mdui-ripple">最新申请</a>
-                        <a href="#historyvocation" class="mdui-list-item mdui-ripple">历史假条</a>
-                        <a href="#countvocation" class="mdui-list-item mdui-ripple">请假统计</a>
+                        <a class="mdui-list-item mdui-ripple mdui-click-captured mdui-list-item-active">最新申请</a>
+                        <a class="mdui-list-item mdui-ripple mdui-click-captured">历史假条</a>
+                        <a class="mdui-list-item mdui-ripple mdui-click-captured">请假统计</a>
                     </div>
                 </div>
                 <div class="mdui-collapse-item mdui-collapse-item">
@@ -53,75 +71,445 @@
                         <div class="mdui-list-item-content">权限管理</div>
                         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
                     </div>
-                    <div class="mdui-collapse-item-body mdui-list mdui-list-dense" >
-                        <a href="#bdqx" class="mdui-list-item mdui-ripple mdui-list-item">班导师权限</a>
-                        <a href="#fdy" class="mdui-list-item mdui-ripple mdui-list-item">辅导员权限</a>
-                        <a href="#xgb" class="mdui-list-item mdui-ripple mdui-list-item">学工办权限</a>
-                        <a href="#jgb" class="mdui-list-item mdui-ripple mdui-list-item">教工办权限</a>
+                    <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a class="mdui-list-item mdui-ripple mdui-list-item mdui-click-captured">班导师/辅导员权限</a>
+                        <a class="mdui-list-item mdui-ripple mdui-list-item mdui-click-captured">学工办权限</a>
+                        <a class="mdui-list-item mdui-ripple mdui-list-item mdui-click-captured">教工办权限</a>
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="mdui-container-fluid">
-            <div id="bdqx">
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
+        <div class="mdui-container">
+            <div class="mdui-row">
+                <div id="bdqx" style="display: none">
+                    <div class="mdui-col-md-6 mdui-col-sm-4 mdui-col-offset-md-3 mdui-m-t-3">
+                        <div class="mdui-card">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">班导师/辅导员权限</div>
+                                <div class="mdui-card-primary-subtitle"></div>
+                            </div>
+                            <!-- 卡片的内容 -->
+                            <div class="mdui-card-content">
+                                <div class="mdui-col-xs-12 mdui-m-b-2">
+                                    <span class="mdui-float-left mdui-l-4">老师姓名：</span>
+                                    <div class="mdui-float-left " style="width: 40%">
+                                        <div class="mdui-textfield mdui-p-t-0">
+                                            <input class="mdui-textfield-input" type="text" placeholder="老师姓名" />
+                                        </div>
+
+                                    </div>
+                                    <button
+                                        class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-m-l-2">获取老师权限</button>
+                                </div>
+                                <div class="mdui-col-xs-12 mdui-m-b-2">
+                                    <span class="mdui-float-left mdui-l-4">班级绑定：</span>
+                                    <select class="mdui-select mdui-float-left">
+                                        <option value="1" selected>数据学院</option>
+                                        <option value="2">生化学院</option>
+                                        <option value="3">机能学院</option>
+                                        <option value="4">传媒学院</option>
+                                        <option value="5">商学院</option>
+                                        <option value="6">法政学院</option>
+                                        <option value="7">外国语学院</option>
+                                        <option value="8">生化学院</option>
+                                        <option value="9">信工学院</option>
+                                        <option value="10">土木学院</option>
+                                    </select>
+                                    <div>
+                                        <div class="mdui-textfield mdui-p-t-0 mdui-p-l-3" style="width:20%">
+                                            <input class="mdui-textfield-input" type="text" placeholder="班级名称" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="mdui-m-l-1">
+                                    <label class="mdui-checkbox">
+                                        <input type="checkbox" name="level" />
+                                        <i class="mdui-checkbox-icon"></i>
+                                        辅导员权限
+                                    </label>
+                                    <label class="mdui-checkbox mdui-m-l-3">
+                                        <input type="checkbox" name="level" />
+                                        <i class="mdui-checkbox-icon"></i>
+                                        班导权限
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 卡片的按钮 -->
+                            <div class="mdui-card-actions">
+                                <button
+                                    class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-m-l-2">确定</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="xgb" style="display: none">
+                    <div class="mdui-col-md-6 mdui-col-sm-4 mdui-col-offset-md-3 mdui-m-t-3">
+                        <div class="mdui-card">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">学工办权限</div>
+                                <div class="mdui-card-primary-subtitle"></div>
+                            </div>
+                            <!-- 卡片的内容 -->
+                            <div class="mdui-card-content">
+                                <div class="mdui-col-xs-12 mdui-m-b-2">
+                                    <span class="mdui-float-left mdui-l-4">老师姓名：</span>
+                                    <div class="mdui-float-left " style="width: 40%">
+                                        <div class="mdui-textfield mdui-p-t-0">
+                                            <input class="mdui-textfield-input" type="text" placeholder="老师姓名" />
+                                        </div>
+
+                                    </div>
+                                    <button
+                                        class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-m-l-2">获取老师权限</button>
+                                </div>
+                               <div class="mdui-m-l-1">
+                                    <label class="mdui-radio">
+                                        <input type="radio" name="level" />
+                                        <i class="mdui-radio-icon"></i>
+                                        无权限
+                                    </label>
+                                    <label class="mdui-radio mdui-m-l-3">
+                                        <input type="radio" name="level" />
+                                        <i class="mdui-radio-icon"></i>
+                                        学工部权限
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 卡片的按钮 -->
+                            <div class="mdui-card-actions">
+                                <button
+                                    class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-m-l-2">确定</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="jgb" style="display: none">
+                        <div class="mdui-col-md-6 mdui-col-sm-4 mdui-col-offset-md-3 mdui-m-t-3">
+                                <div class="mdui-card">
+                                    <div class="mdui-card-primary">
+                                        <div class="mdui-card-primary-title"> 教工办权限</div>
+                                        <div class="mdui-card-primary-subtitle"></div>
+                                    </div>
+                                    <!-- 卡片的内容 -->
+                                    <div class="mdui-card-content">
+                                        <div class="mdui-col-xs-12 mdui-m-b-2">
+                                            <span class="mdui-float-left mdui-l-4">老师姓名：</span>
+                                            <div class="mdui-float-left " style="width: 40%">
+                                                <div class="mdui-textfield mdui-p-t-0">
+                                                    <input class="mdui-textfield-input" type="text" placeholder="老师姓名" />
+                                                </div>
+        
+                                            </div>
+                                            <button
+                                                class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-m-l-2">获取老师权限</button>
+                                        </div>
+                                       
+                                        <div class="mdui-m-l-1">
+                                            <label class="mdui-radio">
+                                                <input type="radio" name="level" />
+                                                <i class="mdui-radio-icon"></i>
+                                                无权限
+                                            </label>
+                                            <label class="mdui-radio mdui-m-l-3">
+                                                <input type="radio" name="level" />
+                                                <i class="mdui-radio-icon"></i>
+                                                教工办权限
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- 卡片的按钮 -->
+                                    <div class="mdui-card-actions">
+                                        <button
+                                            class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-m-l-2">确定</button>
+                                    </div>
+        
+                                </div>
+                            </div>
+                </div>
+                <div id="newsubmit">
+                    <div class="mdui-card mdui-m-t-5">
+                        <form action="">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">请假申请</div>
+                                <div class="mdui-card-primary-subtitle">请假人：小明</div>
+                            </div>
+                            <div class="mdui-card-content">
+                                <div class="mdui-row">
+                                    <div class="mdui-col-xs-6">
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>请假时间：</span>
+                                            <span>2019-01-02</span>
+                                            <span class="mdui-m-l-1 mdui-m-r-1">——</span>
+                                            <span>2019-01-03</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>请假类型：</span>
+                                            <span>病假</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>请假理由：</span>
+                                            <span>生病住院</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>班导师意见：</span>
+                                            <span>同意</span>
+                                        </div>
+                                    </div>
+                                    <div class="mdui-col-xs-6">
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>学生联系电话：</span>
+                                            <span>18158510459</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>学生紧急联系电话：</span>
+                                            <span>18158510459</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>学生留言：</span>
+                                            <span>望老师批准！</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>辅导员意见：</span>
+                                            <span>同意</span>
+                                        </div>
+                                    </div>
+                                    <div class="mdui-col-xs-9">
+                                        <div class="mdui-m-b-1">
+                                            <span style="font: size 16px;font-weight: bolder">教务处意见：</span>
+                                            <div class="mdui-textfield mdui-p-t-0">
+                                                <textarea class="mdui-textfield-input"
+                                                    placeholder="教务处回复(可选)"></textarea>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="mdui-radio">
+                                                <input type="radio" name="reply" />
+                                                <i class="mdui-radio-icon"></i>
+                                                不同意
+                                            </label>
+
+                                            <label class="mdui-radio mdui-m-l-2">
+                                                <input type="radio" name="reply" />
+                                                <i class="mdui-radio-icon"></i>
+                                                同意
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdui-card-actions">
+                                <button
+                                    class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-float-right">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="historyvocation" style="display: none">
+                    <div class="mdui-card mdui-m-t-5">
+                        <div class="mdui-card-primary mdui-p-b-0">
+                            <div class="mdui-card-primary-title">申请条</div>
+                            <div class="mdui-card-primary-subtitle">
+                                <span>请假人：<span>小明</span></span>
+                                <span class="mdui-m-l-1">申请时间：<span>2019-01-01 17:23:45</span></span>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-btn-icon mdui-float-right open-btn"><i
+                                    class="mdui-icon material-icons">expand_more</i></button>
+                        </div>
+                        <div class="mdui-card-content mdui-hidden">
+                            <div class="mdui-row">
+                                <div class="mdui-col-xs-6">
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>请假时间：</span>
+                                        <span>2019-01-02</span>
+                                        <span class="mdui-m-l-1 mdui-m-r-1">——</span>
+                                        <span>2019-01-03</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>请假类型：</span>
+                                        <span>病假</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>请假理由：</span>
+                                        <span>生病住院</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>班导师意见：</span>
+                                        <span>同意</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>请假结果：</span>
+                                        <span>同意</span>
+                                    </div>
+                                </div>
+                                <div class="mdui-col-xs-6">
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>学生联系电话：</span>
+                                        <span>18158510459</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>学生紧急联系电话：</span>
+                                        <span>18158510459</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>学生留言：</span>
+                                        <span>望老师批准！</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>辅导员意见：</span>
+                                        <span>同意</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>批准时间：</span>
+                                        <span>2019-01-01 18:20:39</span>
+                                    </div>
+                                </div>
+                                <div class="mdui-col-xs-9">
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span style="font: size 16px;font-weight: bolder">教务处意见：</span>
+                                        <span>注意安全</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="mdui-card-actions">
+                                <button class="mdui-btn mdui-btn-icon mdui-float-right retract-btn">
+                                    <i class="mdui-icon material-icons">keyboard_arrow_down</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="countvocation" class="mdui-m-t-5" style="display: none">
+                    <div class="mdui-col-xs-4">
+                        <div class="mdui-card">
+                            <div class="mdui-card-content ">
+                                <h2 class="mdui-m-b-0 mdui-text-color-black-secondary">今日请假人数</h2>
+                                <span class="peoplecount mdui-center mdui-m-t-3 mdui-p-b-3">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-4">
+                        <div class="mdui-card">
+                            <div class="mdui-card-content">
+                                <h2 class="mdui-m-b-0  mdui-text-color-black-secondary">本周请假人数</h2>
+                                <span class="peoplecount mdui-center mdui-m-t-3 mdui-p-b-3">10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-4">
+                        <div class="mdui-card">
+                            <div class="mdui-card-content">
+                                <h2 class="mdui-m-b-0 mdui-text-color-black-secondary">本月请假人数</h2>
+                                <span class="peoplecount mdui-center mdui-m-t-3 mdui-p-b-3">10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-6">
+                        <div class="mdui-card mdui-m-t-3 mdui-p-t-2">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-l-4" style="width: 75px;float:left">数据来源：</div>
+                                <select class="mdui-select">
+                                    <option value="1" selected>数据学院</option>
+                                    <option value="2">生化学院</option>
+                                    <option value="3">机能学院</option>
+                                    <option value="4">传媒学院</option>
+                                    <option value="5">商学院</option>
+                                    <option value="6">法政学院</option>
+                                    <option value="7">外国语学院</option>
+                                    <option value="8">生化学院</option>
+                                    <option value="9">信工学院</option>
+                                    <option value="10">土木学院</option>
+                                </select>
+                            </div>
+                            <div class="mdui-card-content">
+                                <div id="left-chart" style="width: 470px;height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-6">
+                        <div class="mdui-card mdui-m-t-3 mdui-p-t-2">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-l-4" style="width: 75px;float:left">数据来源：</div>
+                                <select class="mdui-select">
+                                    <option value="1" selected>数据学院</option>
+                                    <option value="2">生化学院</option>
+                                    <option value="3">机能学院</option>
+                                    <option value="4">传媒学院</option>
+                                    <option value="5">商学院</option>
+                                    <option value="6">法政学院</option>
+                                    <option value="7">外国语学院</option>
+                                    <option value="8">生化学院</option>
+                                    <option value="9">信工学院</option>
+                                    <option value="10">土木学院</option>
+                                </select>
+                            </div>
+                            <div class="mdui-card-content">
+                                <div id="right-chart" style="width: 470px;height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-6">
+                        <div class="mdui-card mdui-m-t-3 mdui-p-t-2">
+                            <div class="mdui-card-primary" style="visibility:hidden">
+                                <div class="mdui-l-4" style="width: 75px;float:left">数据来源：</div>
+                                <select id="college" class="mdui-select">
+                                    <option value="1" selected>数据学院</option>
+                                    <option value="2">生化学院</option>
+                                    <option value="3">机能学院</option>
+                                    <option value="4">传媒学院</option>
+                                    <option value="5">商学院</option>
+                                    <option value="6">法政学院</option>
+                                    <option value="7">外国语学院</option>
+                                    <option value="8">生化学院</option>
+                                    <option value="9">信工学院</option>
+                                    <option value="10">土木学院</option>
+                                </select>
+                            </div>
+                            <div class="mdui-card-content">
+                                <div id="leftbottom-chart" style="width: 470px;height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-6">
+                        <div class="mdui-card mdui-m-t-3 mdui-p-t-2">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-l-4" style="width: 75px;float:left">数据来源：</div>
+                                <select id="college" class="mdui-select">
+                                    <option value="1" selected>数据学院</option>
+                                    <option value="2">生化学院</option>
+                                    <option value="3">机能学院</option>
+                                    <option value="4">传媒学院</option>
+                                    <option value="5">商学院</option>
+                                    <option value="6">法政学院</option>
+                                    <option value="7">外国语学院</option>
+                                    <option value="8">生化学院</option>
+                                    <option value="9">信工学院</option>
+                                    <option value="10">土木学院</option>
+                                </select>
+                            </div>
+                            <div class="mdui-card-content">
+                                <div id="rightbottom-chart" style="width: 470px;height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="fdy">
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-                <p>2</p>
-            </div>
-            <div id="xgb">
-                <p>3</p>
-            </div>
-            <div id="jgb">
-                <p>4</p>
-            </div>
-            <div id="newsubmit">
-                <p>5</p>
-            </div>
-            <div id="historyvocation">
-                <p>6</p>
-            </div>
-            <div id="countvocation">
-                <p>7</p>
-            </div>
+        </div>
+        <div class="mdui-color-theme" id="content-footer">
+            <div class="mdui-center">Copyright &copy; <a href="https://github.com/jadezi/SLS">jade.zi</a> & sohl</div>
         </div>
     </div>
 </body>
-<script src="./js/jquery.min.js"></script>
+<!-- <script src="./js/jquery.min.js"></script> -->
 <script src="./js/mdui.min.js"></script>
-<script>
-
-</script>
+<script src="./js/jwc.js"></script>
+<script src="./js/macarons.js"></script>
+<script src="./js/jwc.chart.js"></script>
 
 </html>
