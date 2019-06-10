@@ -74,9 +74,9 @@
                 <div class="mdui-card mdui-m-t-5 mdui-p-b-1 card-content ">
                     <div class="mdui-card-header" style="height:auto;">
                         <div class="mdui-progress ">
-                            <div class="mdui-progress-determinate mdui-color-pink" style="width: 10%;"></div>
+                            <div class="mdui-progress-determinate mdui-color-pink" style="width: 20%;"></div>
                         </div>
-                        <div class="mdui-p-t-1">进度：<span class="progress-text">10%</span></div>
+                        <div class="mdui-p-t-1">进度：<span class="progress-text">20%</span></div>
                     </div>
                     <div class="mdui-card-primary mdui-p-t-0">
                         <div class="mdui-card-primary-title ">请假申请</div>
@@ -91,12 +91,12 @@
                                 <div>
                                     <span class="mdui-float-left mdui-l-4">请假类型：</span>
                                     <label class="mdui-radio mdui-m-r-3">
-                                        <input type="radio" name="vacation" value="0" />
+                                        <input type="radio" name="vacation" value="病假" />
                                         <i class="mdui-radio-icon"></i>
                                         <span>病假</span>
                                     </label>
                                     <label class="mdui-radio mdui-m-r-3">
-                                        <input type="radio" name="vacation" value="1" />
+                                        <input type="radio" name="vacation" value="事假" />
                                         <i class="mdui-radio-icon"></i>
                                         <span>事假</span>
                                     </label>
@@ -177,14 +177,14 @@
                         <div class="mdui-m-b-1 mdui-l-4">
                             <span class="mdui-m-r-1 ">审核结果邮箱通知</span>
                             <label class="mdui-switch">
-                                <input type="checkbox" name="emailaccept" />
+                                <input type="checkbox" name="switch" value="openemail"/>
                                 <i class="mdui-switch-icon"></i>
                             </label>
                         </div>
                         <div class="mdui-m-b-1 mdui-l-4">
                             <span class="mdui-m-r-1 ">审核结果短信通知</span>
                             <label class="mdui-switch">
-                                <input type="checkbox" name="messageaccept" />
+                                <input type="checkbox" name="switch" value="opensms"/>
                                 <i class="mdui-switch-icon"></i>
                             </label>
                         </div>
@@ -237,6 +237,9 @@
 <script src="./js/mdui.min.js"></script>
 <script src="/js/leave.js"></script>
 <script>
+    // $(".mdui-switch input:[type='checkbox]").click(function () {
+    //     $(".mdui-switch input").attr("checked","checked");
+    // })
 
 </script>
 

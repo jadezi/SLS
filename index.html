@@ -66,19 +66,19 @@
                         <div class="mdui-textfield mdui-textfield-floating-label">
                             <i class="mdui-icon material-icons ">account_box</i>
                             <label class="mdui-textfield-label">学号</label>
-                            <input class="mdui-textfield-input " name="id" type="text" required />
+                            <input id="userId" class="mdui-textfield-input "  name="id" type="text" required />
                             <div class="mdui-textfield-error">学号不能为空</div>
                         </div>
                         <div class="mdui-textfield mdui-textfield-floating-label">
                             <i class="mdui-icon material-icons">lock</i>
                             <label class="mdui-textfield-label">密码</label>
-                            <input class="mdui-textfield-input" name="pwd" type="text" required />
+                            <input id="pwd" class="mdui-textfield-input" name="pwd" type="text" required />
                             <div class="mdui-textfield-error">密码不能为空</div>
                         </div>
                         <div class="mdui-textfield mdui-textfield-floating-label">
                             <i class="mdui-icon material-icons">filter_hdr</i>
                             <label class="mdui-textfield-label">验证码</label>
-                            <input class="mdui-textfield-input" type="text" required />
+                            <input id="vCode" class="mdui-textfield-input" type="text" name="checkcode" required />
                             <div class="mdui-textfield-error">验证码不能为空</div>
                         </div>
                         <div class="checkcode">
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="mdui-center" style="width:88px">
-                            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent">
+                            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" disabled>
                                 <i class="mdui-icon material-icons">fingerprint</i>
                             </button>
                         </div>
@@ -125,7 +125,18 @@
     </div>
 </body>
 <script>
-    var inst = new mdui.Select('#identity');
+    var $$ = mdui.JQ;
+        $$("input[name='userId'],input[name='pwd'],input[name='checkcode']").on('blur', function(){
+            console.log(1);
+            var userFlag = $$("#userId").val();
+            var pwdFlag = $$("#pwd").val();
+            var codeFlag = $$("#vCode").val();
+            if (userFlag !="" && pwdFlag!="" && codeFlag!="") {
+                $$(".mdui-btn").removeAttr("disabled");
+            }else{
+                $$(".mdui-btn").attr("disabled","disabled");
+            }
+        })
 </script>
 
 </html>

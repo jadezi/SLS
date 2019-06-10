@@ -45,7 +45,7 @@ leftoption = {
     series: [{
         name: '请假人数',
         type: 'line',
-        data: [2, 3, 1, 4, 9, 3, 2],
+        data: [2, 3, 1, 4, 9, ],
     }]
 };
 
