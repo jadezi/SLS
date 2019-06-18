@@ -80,75 +80,81 @@
         <div class="mdui-container">
             <div class="mdui-row">
                 <div id="new">
-                    <div class="mdui-card mdui-m-t-5">
-                        <div class="mdui-card-primary">
-                            <div class="mdui-card-primary-title">请假申请</div>
-                            <div class="mdui-card-primary-subtitle">请假人：小明</div>
-                        </div>
-                        <div class="mdui-card-content">
-                            <div class="mdui-row">
-                                <div class="mdui-col-xs-6">
-                                    <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>请假时间：</span>
-                                        <span>2019-01-02</span>
-                                        <span class="mdui-m-l-1 mdui-m-r-1">——</span>
-                                        <span>2019-01-03</span>
-                                    </div>
-                                    <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>请假类型：</span>
-                                        <span>病假</span>
-                                    </div>
-                                    <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>请假理由：</span>
-                                        <span>生病住院</span>
-                                    </div>
-                                    <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>班导意见：</span>
-                                        <span>同意</span>
-                                    </div>
-                                </div>
-                                <div class="mdui-col-xs-6">
-                                    <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>学生联系电话：</span>
-                                        <span>18158510459</span>
-                                    </div>
-                                    <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>学生紧急联系电话：</span>
-                                        <span>18158510459</span>
-                                    </div>
-                                    <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>学生留言：</span>
-                                        <span>望老师批准！</span>
-                                    </div>
-                                </div>
-                                <div class="mdui-col-xs-9">
-                                    <div class="mdui-m-b-1">
-                                        <span style="font: size 16px;font-weight: bolder">学工办意见：</span>
-                                        <div class="mdui-textfield mdui-p-t-0">
-                                            <textarea class="mdui-textfield-input" placeholder="老师回复"></textarea>
+                    <form>
+                        <div class="mdui-card mdui-m-t-5">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">请假申请</div>
+                                <div class="mdui-card-primary-subtitle">请假人：小明</div>
+                            </div>
+                            <div class="mdui-card-content">
+                                <div class="mdui-row">
+                                    <div class="mdui-col-xs-6">
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>请假时间：</span>
+                                            <span>2019-01-02</span>
+                                            <span class="mdui-m-l-1 mdui-m-r-1">——</span>
+                                            <span>2019-01-03</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>请假类型：</span>
+                                            <span>病假</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>请假理由：</span>
+                                            <span>生病住院</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>班导意见：</span>
+                                            <span>同意</span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <label class="mdui-radio">
-                                            <input type="radio" name="reply" />
-                                            <i class="mdui-radio-icon"></i>
-                                            不同意
-                                        </label>
+                                    <div class="mdui-col-xs-6">
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>学生联系电话：</span>
+                                            <span>18158510459</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>学生紧急联系电话：</span>
+                                            <span>18158510459</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>学生留言：</span>
+                                            <span>望老师批准！</span>
+                                        </div>
+                                        <div class="mdui-m-b-1 mdui-l-4">
+                                            <span>辅导员意见：</span>
+                                            <span>同意</span>
+                                        </div>
+                                    </div>
+                                    <div class="mdui-col-xs-9">
+                                        <div class="mdui-m-b-1">
+                                            <span style="font: size 16px;font-weight: bolder">学工办意见：</span>
+                                            <div class="mdui-textfield mdui-p-t-0">
+                                                <textarea class="mdui-textfield-input" placeholder="老师回复" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="mdui-radio">
+                                                <input type="radio" name="reply" required/>
+                                                <i class="mdui-radio-icon"></i>
+                                                不同意
+                                            </label>
 
-                                        <label class="mdui-radio mdui-m-l-2">
-                                            <input type="radio" name="reply" />
-                                            <i class="mdui-radio-icon"></i>
-                                            同意
-                                        </label>
+                                            <label class="mdui-radio mdui-m-l-2">
+                                                <input type="radio" name="reply" required/>
+                                                <i class="mdui-radio-icon"></i>
+                                                同意
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="mdui-card-actions">
+                                <button
+                                    class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-float-right">提交</button>
+                            </div>
                         </div>
-                        <div class="mdui-card-actions">
-                            <button
-                                class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-float-right">提交</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div id="history">
                     <div class="mdui-card mdui-m-t-5">
@@ -185,7 +191,7 @@
                                         <span>同意</span>
                                     </div>
                                     <div class="mdui-m-b-1 mdui-l-4">
-                                        <span>请假结果：</span>
+                                        <span>辅导员意见：</span>
                                         <span>同意</span>
                                     </div>
                                 </div>
@@ -205,6 +211,10 @@
                                     <div class="mdui-m-b-1 mdui-l-4">
                                         <span>批准时间：</span>
                                         <span>2019-01-01 18:20:39</span>
+                                    </div>
+                                    <div class="mdui-m-b-1 mdui-l-4">
+                                        <span>请假结果：</span>
+                                        <span>同意</span>
                                     </div>
                                 </div>
                                 <div class="mdui-col-xs-9">
